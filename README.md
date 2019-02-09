@@ -13,6 +13,8 @@
 
 3. To control the car with keyboard (with 2 running): `rosrun teleop_twist_keyboard teleop_twist_keyboard.py `
 
+![](Screenshot%20from%202019-02-09%2013-43-49.png)
+
  (Add PointCloud2 and Camera in RVIZ to view Kinect readings)
 
-![](Screenshot%20from%202019-02-09%2013-43-49.png)
+![](Screenshot%20from%202019-02-09%2015-50-47.png)
