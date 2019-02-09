@@ -177,7 +177,7 @@
 	
 	<link name="kinect_link" />
 	
-	<joint name="joint_kinect_link" type="continuous">
+	<joint name="joint_kinect_link" type="fixed">
 		<origin rpy="-1.5707 0 -1.5707" xyz="${l1/2} 0 ${h1/2+hk/2}"/>
 		<child link="kinect_link"/>
 		<parent link="chassis"/>
