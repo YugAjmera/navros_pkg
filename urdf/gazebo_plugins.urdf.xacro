@@ -30,6 +30,7 @@
 	    <updateRate>20</updateRate>
 	    <leftJoint>joint_left_wheel_chassis</leftJoint>
 	    <rightJoint>joint_right_wheel_chassis</rightJoint>
+	    <publishWheelTF>True</publishWheelTF>
 	    <wheelSeparation>0.2</wheelSeparation>
 	    <wheelDiameter>0.2</wheelDiameter>
 	    <torque>0.1</torque>
