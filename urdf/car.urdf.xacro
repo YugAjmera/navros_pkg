@@ -96,7 +96,7 @@
 	
 
 	<joint name="joint_right_wheel_chassis" type="continuous">
-		<origin rpy="0 0 0" xyz="-0.05 ${b1/2} 0"/>
+		<origin rpy="0 0 0" xyz="-0.05 -${b1/2} 0"/>
 		<child link="right_wheel"/>
 		<parent link="chassis"/>
 		<axis xyz="0 1 0"/>
@@ -131,7 +131,7 @@
 	
 
 	<joint name="joint_left_wheel_chassis" type="continuous">
-		<origin rpy="0 0 0" xyz="-0.05 -${b1/2} 0"/>
+		<origin rpy="0 0 0" xyz="-0.05 ${b1/2} 0"/>
 		<child link="left_wheel"/>
 		<parent link="chassis"/>
 		<axis xyz="0 1 0"/>
@@ -171,6 +171,15 @@
 	<joint name="joint_kinect_chassis" type="fixed">
 		<origin rpy="0 0 0" xyz="${l1/2-lk/2} 0 ${h1/2+hk/2}"/>
 		<child link="kinect"/>
+		<parent link="chassis"/>
+		
+	</joint>
+	
+	<link name="kinect_link" />
+	
+	<joint name="joint_kinect_link" type="continuous">
+		<origin rpy="-1.5707 0 -1.5707" xyz="${l1/2} 0 ${h1/2+hk/2}"/>
+		<child link="kinect_link"/>
 		<parent link="chassis"/>
 		
 	</joint>

@@ -65,7 +65,7 @@
 		     <alwaysOn>true</alwaysOn>
 		        <updateRate>10.0</updateRate>
 		        <cameraName>kinect</cameraName>
-		        <frameName>joint_kinect_chassis</frameName>                   
+		        <frameName>kinect_link</frameName>                   
 		    <imageTopicName>rgb/image_raw</imageTopicName>
 		    <depthImageTopicName>depth/image_raw</depthImageTopicName>
 		    <pointCloudTopicName>depth/points</pointCloudTopicName>
