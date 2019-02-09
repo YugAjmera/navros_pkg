@@ -1,0 +1,180 @@
+<?xml version="1.0"?>
+<robot name="car" xmlns:xacro="http://ros.org/wiki/xacro" >
+
+ <material name="blue">
+ 	<color rgba="0 0 0.8 1"/>
+ </material>
+
+ <material name="white">
+	 <color rgba="1 1 1 1"/>
+ </material>
+
+	
+ <xacro:property name="m" value="2" />
+ <xacro:property name="l1" value="0.5" />		
+ <xacro:property name="b1" value="0.3" />		
+ <xacro:property name="h1" value="0.07" />
+
+ <xacro:property name="r2" value="0.05" />
+
+	<link name="chassis">
+		<visual>
+			<origin rpy="0 0 0" xyz="0 0 0"/>
+			<geometry>
+				<box size="${l1} ${b1} ${h1}"/>
+			</geometry>
+			<material name="blue"/>
+			
+		</visual>
+		
+		<collision name="collision_chassis">
+			<geometry>
+				<box size="${l1} ${b1} ${h1}"/>
+			</geometry>
+		</collision>
+
+		<inertial>
+			<mass value="${m}"/>
+			<origin rpy="0 0 0" xyz="0 0 0"/>
+			<inertia ixx="${m*h1*b1/12.0}" ixy="0" ixz="0" iyy="${m*l1*h1/12.0}" iyz="0" izz="${m*l1*b1/12.0}"/>
+		</inertial>
+
+			
+		<!-- caster wheel-->
+		<visual>
+			<origin rpy="0 0 0" xyz="${l1/2-r2} 0 -${r2}"/>
+			<geometry>
+				<sphere radius="${r2}"/>
+			</geometry>
+		</visual>
+
+		<collision name="caster_front_collision">
+			<origin rpy="0 0 0" xyz="${l1/2-r2} 0 -${r2}"/>
+			<geometry>
+				<sphere radius="${r2}"/>
+			</geometry>
+			<surface>
+				<friction>
+					<ode>
+						<mu>0</mu>
+						<mu2>0</mu2>
+						<slip1>1.0</slip1>
+						<slip2>1.0</slip2>
+					</ode>
+				</friction>
+			</surface>
+		</collision>	
+	</link>
+
+ <xacro:property name="l3" value="0.04" />		
+ <xacro:property name="r3" value="0.1" />
+ <xacro:property name="m3" value="0.2" />
+
+	<link name="right_wheel">
+		<visual>
+			<origin rpy="0 1.5707 1.5707" xyz="0 0 0"/>
+			<geometry>
+					<cylinder radius="${r3}" length="${l3}" />
+			</geometry>
+			<material name="white"/>
+		</visual>
+
+		<collision name="collision_right_wheel">
+		<origin rpy="0 1.5707 1.5707" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="${r3}" length="${l3}" />
+			</geometry>
+		</collision>
+
+		<inertial>
+			<mass value="${m3}"/>
+			<origin rpy="0 1.5707 1.5707" xyz="0 0 0"/>
+			<inertia ixx="${m3*((3*r3*r3)+(l3*l3))/12.0}" ixy="0" ixz="0" iyy="${m3*((3*r3*r3)+(l3*l3))/12.0}" iyz="0" izz="${(m3*r3*r3)/2.0}"/>
+		</inertial>
+	</link>
+	
+	
+
+	<joint name="joint_right_wheel_chassis" type="continuous">
+		<origin rpy="0 0 0" xyz="-0.05 ${b1/2} 0"/>
+		<child link="right_wheel"/>
+		<parent link="chassis"/>
+		<axis xyz="0 1 0"/>
+		<limit effort="10000" velocity="1000"/>
+		<joint_properties damping="1.0" friction="1.0"/>
+	</joint>
+	
+	
+
+	<link name="left_wheel">
+		<visual>
+			<origin rpy="0 1.5707 1.5707" xyz="0 0 0"/>
+			<geometry>
+					<cylinder radius="${r3}" length="${l3}" />
+			</geometry>
+			<material name="white"/>
+		</visual>
+
+		<collision name="collision_left_wheel">
+		<origin rpy="0 1.5707 1.5707" xyz="0 0 0"/>
+			<geometry>
+				<cylinder radius="${r3}" length="${l3}" />
+			</geometry>
+		</collision>
+
+		<inertial>
+			<mass value="${m3}"/>
+			<origin rpy="0 1.5707 1.5707" xyz="0 0 0"/>
+			<inertia ixx="${m3*((3*r3*r3)+(l3*l3))/12.0}" ixy="0" ixz="0" iyy="${m3*((3*r3*r3)+(l3*l3))/12.0}" iyz="0" izz="${(m3*r3*r3)/2.0}"/>
+		</inertial>
+	</link>
+	
+
+	<joint name="joint_left_wheel_chassis" type="continuous">
+		<origin rpy="0 0 0" xyz="-0.05 -${b1/2} 0"/>
+		<child link="left_wheel"/>
+		<parent link="chassis"/>
+		<axis xyz="0 1 0"/>
+		<limit effort="10000" velocity="1000"/>
+		<joint_properties damping="1.0" friction="1.0"/>
+	</joint>
+
+
+ <xacro:property name="mk" value="0.1" />
+ <xacro:property name="lk" value="0.05" />		
+ <xacro:property name="bk" value="0.2" />		
+ <xacro:property name="hk" value="0.05" />
+	
+	<!-- Kinect Sensor -->
+	<link name="kinect">
+		<visual>
+			<origin rpy="0 0 0" xyz="0 0 0"/>
+			<geometry>
+					<box size="${lk} ${bk} ${hk}"/>
+			</geometry>
+		</visual>
+	
+		<collision name="collision_kinect">
+			<geometry>
+					<box size="${lk} ${bk} ${hk}"/>
+			</geometry>
+		</collision>
+
+		<inertial>
+			<mass value="${mk}"/>
+			<origin rpy="0 0 0" xyz="0 0 0"/>
+			<inertia ixx="${mk*hk*bk/12.0}" ixy="0" ixz="0" iyy="${mk*lk*hk/12.0}" iyz="0" izz="${mk*lk*bk/12.0}"/>
+		</inertial>
+	</link>
+	
+	
+	<joint name="joint_kinect_chassis" type="fixed">
+		<origin rpy="0 0 0" xyz="${l1/2-lk/2} 0 ${h1/2+hk/2}"/>
+		<child link="kinect"/>
+		<parent link="chassis"/>
+		
+	</joint>
+
+<xacro:include filename="$(find navros_pkg)/urdf/gazebo_plugins.urdf.xacro" />
+	
+</robot>
