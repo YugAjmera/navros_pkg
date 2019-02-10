@@ -10,4 +10,8 @@
 
 5. Alligned kinect_link to view the models in the plane. (Reference : Screenshot from 2019-02-09 15-50-47.png )
 
-6. Added PublishWheelTF in the plugin to get tfs of all the links (Reference : Screenshot from 2019-02-10 11-58-40.png )
+6. Added PublishWheelTF in the plugin to get tfs of all the links fixed and non-fixed (Reference : Screenshot from 2019-02-10 11-58-40.png )
+
+7. **/kinect/depth/points** topic gives a 3D point cloud. It needs to be converted into 2D laser scan in order to use slam_gmapping node. For that we need to you pointcloud_to_laserscan node. Install it : `sudo apt install ros-kinetic-pointcloud-to-laserscan ros-kinetic-rosbridge-server`. Created a launch file to execute the node.
+
+
