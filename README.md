@@ -6,7 +6,10 @@
 - `cd ..` (Go back to catkin_ws/)
 - `catkin_make`
 - `source ./devel/setup.bash`
+
+
 [ View full documentation here ](https://github.com/YugAjmera/navros_pkg/blob/master/Documentation.md) 
+
 
 Execute everything in different tabs :
 
