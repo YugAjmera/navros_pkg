@@ -7,6 +7,10 @@
 - `catkin_make`
 - `source ./devel/setup.bash`
 
+
+View [full documentation here ](https://github.com/YugAjmera/navros_pkg/blob/master/Documentation.md) 
+
+
 Execute everything in different tabs :
 
 1. To view the model in Gazebo: `roslaunch navros_pkg urdf_gazebo_view.launch `
