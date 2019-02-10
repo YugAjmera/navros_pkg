@@ -8,7 +8,7 @@
 - `source ./devel/setup.bash`
 
 
-[ View full documentation here ](https://github.com/YugAjmera/navros_pkg/blob/master/Documentation.md) 
+View [full documentation here ](https://github.com/YugAjmera/navros_pkg/blob/master/Documentation.md) 
 
 
 Execute everything in different tabs :
