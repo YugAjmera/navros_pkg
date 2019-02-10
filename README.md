@@ -7,12 +7,18 @@
 - `catkin_make`
 - `source ./devel/setup.bash`
 
+Execute everything in different tabs :
 
 1. To view the model in Gazebo: `roslaunch navros_pkg urdf_gazebo_view.launch `
 
-2. To control the car with keyboard (with 1 running): `rosrun teleop_twist_keyboard teleop_twist_keyboard.py `
+2. To control the car with keyboard : `rosrun teleop_twist_keyboard teleop_twist_keyboard.py `
 
 3. To view the model in RVIZ (using joint_state_publisher gui): `roslaunch navros_pkg urdf_rviz_view.launch`
  (Add PointCloud2 and Camera in RVIZ to view Kinect readings)
 
-4. To get laser scan readings (with 1 running): `roslaunch navros_pkg pctl.launch`
+4. To get laser scan readings : `roslaunch navros_pkg pctl.launch`
+
+5. To read the map : `roslaunch navros_pkg kinect_gmapping.launch`
+Add Map to RVIZ to view the map being built.
+
+

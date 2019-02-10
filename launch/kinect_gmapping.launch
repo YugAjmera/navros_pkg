@@ -1,5 +1,5 @@
 <launch>
-  <arg name="scan_topic"  default="kinect/depth/points" />
+  <arg name="scan_topic"  default="kinect/scan" />
   <arg name="base_frame"  default="chassis"/>
   <arg name="odom_frame"  default="odom"/>
 
