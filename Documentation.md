@@ -4,7 +4,7 @@
 
 2. Added Differential Drive Gazebo Plugin for the car.
 
-3. Added Launch files to view in RVIZ and spawn in Gazebo. (Reference : Screenshot from 2019-02-09 13-43-49.png )
+3. Added Launch files to view in RVIZ and spawn in Gazebo. ![] (Screenshot%20from%202019-02-10%2013-49-50.png)
 
 4. Added Kinect sensor and added Gazebo Plugins for it. 
 
