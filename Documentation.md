@@ -16,6 +16,6 @@
 
 8. Created a launch file "pctl.launch" to launch the node. It provides the topic **/kinect/scan**.  ( Reference : Screenshot from 2019-02-10 13-49-50.png )
 
-9. Created a launch file "kinect_gmapping.launch" to launch the slam_gmapping node. It provides **/map** topic.
+9. Created a launch file "kinect_gmapping.launch" to launch the slam_gmapping node. It provides **/map** topic. 
 
 

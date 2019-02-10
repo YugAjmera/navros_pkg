@@ -19,6 +19,10 @@ Execute everything in different tabs :
 4. To get laser scan readings : `roslaunch navros_pkg pctl.launch`
 
 5. To read the map : `roslaunch navros_pkg kinect_gmapping.launch`
-Add Map to RVIZ to view the map being built.
+Add Map to RVIZ to view the map being built. Move the car around an environment to scan it.
+
+6. To save the map built : `rosrun map_server map_saver -f name_of_map`
+
+
 
 
