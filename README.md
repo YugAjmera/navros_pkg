@@ -13,19 +13,19 @@ View [full documentation here ](https://github.com/YugAjmera/navros_pkg/blob/mas
 
 Execute everything in different tabs :
 
-1. To view the model in Gazebo: `roslaunch navros_pkg urdf_gazebo_view.launch `
+1. To view the model in Gazebo: `roslaunch navros_pkg urdf_gazebo_view.launch `. (Launch `roslaunch gazebo_ros empty_world.launch` before)
 
-2. To control the car with keyboard : `rosrun teleop_twist_keyboard teleop_twist_keyboard.py `
+2. To control the car with keyboard : `rosrun teleop_twist_keyboard teleop_twist_keyboard.py `.
 
-3. To view the model in RVIZ (using joint_state_publisher gui): `roslaunch navros_pkg urdf_rviz_view.launch`
+3. To view the model in RVIZ (using joint_state_publisher gui): `roslaunch navros_pkg urdf_rviz_view.launch`.
  (Add PointCloud2 and Camera in RVIZ to view Kinect readings)
 
-4. To get laser scan readings : `roslaunch navros_pkg pctl.launch`
+4. To get laser scan readings : `roslaunch navros_pkg pctl.launch`.
 
-5. To read the map : `roslaunch navros_pkg kinect_gmapping.launch`
+5. To read the map : `roslaunch navros_pkg kinect_gmapping.launch`.
 Add Map to RVIZ to view the map being built. Move the car around an environment to scan it.
 
-6. To save the map built : `rosrun map_server map_saver -f name_of_map`
+6. To save the map built : `rosrun map_server map_saver -f name_of_map`.
 
 
 
