@@ -34,9 +34,9 @@ Execute everything in different tabs :
 
 6. To save the map built :
  ` cd catkin_ws/src/navros_pkg/maps`
- `rosrun map_server map_saver -f map1`
+ `rosrun map_server map_saver -f name_of_map`
 
-7. To view the probable position and orientation of robot : `roslaunch navros_pkg amcl.launch`.
+7. To view the probable position and orientation of robot : `roslaunch navros_pkg amcl.launch map:='name_of_map'`.
    * Add PoseArray in RVIZ to view the arrows.
    * Move the car via teleop keyboard to get more precise localization of the robot.
 

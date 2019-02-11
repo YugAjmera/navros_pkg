@@ -1,6 +1,8 @@
 <launch>
   
-  <arg name="map_file" default="$(find navros_pkg)/maps/map1.yaml"/>
+  <arg name="map" default=""/>
+
+  <arg name="map_file" default="$(find navros_pkg)/maps/$(arg map).yaml"/>
   <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
 
   <arg name="use_map_topic"   default="true"/>
