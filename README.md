@@ -37,11 +37,12 @@ Execute everything in different tabs :
  ` cd catkin_ws/src/navros_pkg/maps`
  `rosrun map_server map_saver -f name_of_map`
 
-7. Shutdown the gmapping node. (Number 5)(Press ctrl+c)
+7. Shutdown the slam_gmapping node. (Number 5)(Press ctrl+c)
 
 8. To view the probable position and orientation of robot : `roslaunch navros_pkg amcl.launch map:='name_of_map'`.
    * Fixed Frame as map
    * Add PoseArray in RVIZ to view the arrows.
+   * 2D point estimate may be added to get faster results.
    * Move the car via teleop keyboard to get more precise localization of the robot.
 
 

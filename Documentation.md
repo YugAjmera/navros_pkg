@@ -25,3 +25,5 @@
 
 ### Localization
 12. Created a launch file "amcl.launch" to launch the amcl node. It provides **/particlecloud** topic to view the probable position and orientation of the robot on PoseArray in RVIZ.  ![](screenshot/Screenshot%20from%202019-02-11%2012-56-32.png)
+
+**__Note__** : Before launching amcl node slam_gmapping node has to be killed. Fixed Frame while mapping has to be odom. While estimating robot position, Fixed Frame has to be map.
