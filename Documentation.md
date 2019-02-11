@@ -12,10 +12,16 @@
 
 6. Added PublishWheelTF in the plugin to get tfs of all the links fixed and non-fixed ![](Screenshot%20from%202019-02-10%2011-58-40.png)
 
-7. **/kinect/depth/points** topic gives a 3D point cloud. It needs to be converted into 2D laser scan in order to use slam_gmapping node. For that we need to you pointcloud_to_laserscan node. Install it : `sudo apt install ros-kinetic-pointcloud-to-laserscan ros-kinetic-rosbridge-server`. 
+### Mapping
+7. **/kinect/depth/points** topic gives a 3D point cloud. It needs to be converted into 2D laser scan in order to use slam_gmapping node. For that we need to use pointcloud_to_laserscan node. Install it : `sudo apt install ros-kinetic-pointcloud-to-laserscan ros-kinetic-rosbridge-server`. 
 
 8. Created a launch file "pctl.launch" to launch the node. It provides the topic **/kinect/scan**. ![](Screenshot%20from%202019-02-10%2013-49-50.png)
 
-9. Created a launch file "kinect_gmapping.launch" to launch the slam_gmapping node. It provides **/map** topic. 
+9. Created a launch file "gmapping.launch" to launch the slam_gmapping node. It provides **/map** topic. 
 
+10. Created a custom cafe environment in gazebo and saved in worlds folder. Changed its extension to .world and created a launch file "cafe_custom.launch" to launch the world.
 
+11. Scaned the cafe environment and saved the map in "maps" folder with name "map1". ![](Screenshot%20from%202019-02-11%2012-28-27.png)
+
+### Localization
+12. Created a launch file "amcl.launch" to launch the amcl node. It provides **/particlecloud** topic to view the probable position and orientation of the robot on PoseArray in RVIZ.  ![](Screenshot%20from%202019-02-11%2012-56-32.png)
