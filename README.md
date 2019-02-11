@@ -25,6 +25,7 @@ Execute everything in different tabs :
 
 3. To view the model in RVIZ (using joint_state_publisher gui): `roslaunch navros_pkg urdf_rviz_view.launch`.
    * Add PointCloud2 and Camera in RVIZ to view Kinect readings
+   * Fixed Frame as odom
 
 4. To get laser scan readings : `roslaunch navros_pkg pctl.launch`.
    * Add LaserScan in RVIZ to view Laser readings
@@ -36,7 +37,10 @@ Execute everything in different tabs :
  ` cd catkin_ws/src/navros_pkg/maps`
  `rosrun map_server map_saver -f name_of_map`
 
-7. To view the probable position and orientation of robot : `roslaunch navros_pkg amcl.launch map:='name_of_map'`.
+7. Shutdown the gmapping node. (Number 5)(Press ctrl+c)
+
+8. To view the probable position and orientation of robot : `roslaunch navros_pkg amcl.launch map:='name_of_map'`.
+   * Fixed Frame as map
    * Add PoseArray in RVIZ to view the arrows.
    * Move the car via teleop keyboard to get more precise localization of the robot.
 
