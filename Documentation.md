@@ -6,9 +6,9 @@
 
 3. Added Launch files to view in RVIZ and spawn in Gazebo. ![](Screenshot%20from%202019-02-09%2013-43-49.png)
 
-4. Added Kinect sensor and added Gazebo Plugins for it. ![](Screenshot%20from%202019-02-09%2015-50-47.png)
+4. Added Kinect sensor and added Gazebo Plugins for it. 
 
-5. Alligned kinect_link to view the models in the plane. 
+5. Alligned kinect_link to view the models in the plane. ![](Screenshot%20from%202019-02-09%2015-50-47.png)
 
 6. Added PublishWheelTF in the plugin to get tfs of all the links fixed and non-fixed ![](Screenshot%20from%202019-02-10%2011-58-40.png)
 
