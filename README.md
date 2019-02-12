@@ -1,6 +1,6 @@
 # NavRos
 
-### Autonomous Navigation for a Differential Drive Robot
+## Autonomous Navigation for a Differential Drive Robot
 
 - `cd catkin_ws/src`
 - `catkin_create_pkg navros_pkg rospy rviz controller_manager gazebo_ros joint_state_publisher robot_state_publisher urdf`
@@ -12,9 +12,10 @@
 
 View [full documentation here ](https://github.com/YugAjmera/navros_pkg/blob/master/Documentation.md) 
 
-
-Execute everything in different tabs :
 * Change the [urdf file](https://github.com/YugAjmera/navros_pkg/blob/master/urdf/car.urdf.xacro) as per the dimensions of your robot.
+
+
+### Execute everything in different tabs :
 
 1. To view the model in Gazebo: `roslaunch navros_pkg urdf_gazebo_view.launch `. Before this launch any of this or your custom environment:
    
