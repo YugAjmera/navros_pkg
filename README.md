@@ -35,8 +35,9 @@ Keep this terminal running for all the next steps.
 
 
 ### Laser sensor
-- On a new terminal :
-- Run RVIZ :
+On a new terminal
+
+Run RVIZ :
 ```
 cd catkin_ws/src/navros_pkg/rviz 
 rviz -d laser.rviz
@@ -45,8 +46,9 @@ Check if the laser readings are seen in RVIZ.
 After the laser readings are visible,close this terminal.
 
 ### Mapping
-- On a new terminal :
-- Run SLAM :
+On a new terminal :
+
+Run SLAM :
 ```
 
 roslaunch navros_pkg gmapping.launch
