@@ -15,4 +15,8 @@
 	<node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="false" output="screen">
 		<remap from="/joint_states" to="/robot/joint_states" />
 	</node>
+
+	<!-- Get laser scan readings -->
+	<include file="$(find navros_pkg)/launch/pctl.launch" />
+
 </launch>

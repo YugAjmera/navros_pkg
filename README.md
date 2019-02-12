@@ -1,6 +1,9 @@
 # NavRos
 
-## Autonomous Navigation for a Differential Drive Robot
+## Autonomous Navigation for a Differential Drive Robot using Kinect Sensor
+
+
+### Getting Started
 
 - `cd catkin_ws/src`
 - `catkin_create_pkg navros_pkg rospy rviz controller_manager gazebo_ros joint_state_publisher robot_state_publisher urdf`
@@ -10,66 +13,90 @@
 - `source ./devel/setup.bash`
 
 
-View [documentation here](https://github.com/YugAjmera/navros_pkg/blob/master/Documentation.md) 
+### Gazebo Simulation
 
-* Change the [urdf file](https://github.com/YugAjmera/navros_pkg/blob/master/urdf/car.urdf.xacro) as per the dimensions of your robot.
+(Skip this while working with real robot)
 
+Change the [urdf file](https://github.com/YugAjmera/navros_pkg/blob/master/urdf/car.urdf.xacro) as per the dimensions of your robot.
 
-### Execute everything in different tabs :
+On a new terminal :
 
-1. To view the model in Gazebo: `roslaunch navros_pkg urdf_gazebo_view.launch `. Before this launch any of this or your custom environment:
-   
-   - To launch a custom cafe environment : 
-    `roslaunch navros_pkg cafe_custom.launch`
-
-   - To launch empty world :
-    `roslaunch gazebo_ros empty_world.launch`
-
-2. To control the car with keyboard : `rosrun teleop_twist_keyboard teleop_twist_keyboard.py `
-
-3. To view the model in RVIZ (using joint_state_publisher gui): `roslaunch navros_pkg urdf_rviz_view.launch`
-   
-4. To view kinect sensor readings in RVIZ : 
-```
-cd catkin_ws/src/navros_pkg/rviz 
-rviz -d kinect.rviz
+To launch the urdf model in Gazebo in a custom cafe environment :
 ```
 
-5. To get laser scan readings : `roslaunch navros_pkg pctl.launch`
+roslaunch navros_pkg cafe_custom.launch
+```
 
-6. To view laser scan readings in RVIZ :
+To launch the model in empty world in Gazebo :
+```
+
+roslaunch gazebo_ros empty_world.launch
+roslaunch navros_pkg urdf_gazebo_view.launch
+```
+Keep this terminal running for all the next steps.
+
+
+### Laser sensor
+On a new terminal :
+Run RVIZ :
 ```
 cd catkin_ws/src/navros_pkg/rviz 
 rviz -d laser.rviz
 ```
+Check if the laser readings are seen in RVIZ.
+After the laser readings are visible,close this terminal.
 
-7. To read the map (slam_gmapping): `roslaunch navros_pkg gmapping.launch`
-   
-8. To view the map being built in RVIZ ( Move the car around an environment to scan it) :
+### Mapping
+On a new terminal :
+Run SLAM :
+```
+
+roslaunch navros_pkg gmapping.launch
+```
+
+Run RVIZ :
 ```
 cd catkin_ws/src/navros_pkg/rviz 
 rviz -d map.rviz
 ```
 
-9. To save the map built :
+Run teleop_twist_keyboard :
+```
+
+rosrun teleop_twist_keyboard teleop_twist_keyboard.py 
+```
+
+Drive the robot around the environment you want to map.
+
+Once mapping is complete,
+Save the map:
+```
+ rosrun map_server map_saver ~/catkin_ws/src/navros_pkg/maps/name_of_map
  ```
- cd catkin_ws/src/navros_pkg/maps
- rosrun map_server map_saver -f name_of_map
- ```
 
-10. Shutdown the slam_gmapping node. (Number 7)(Press ctrl+c)
+Now,close this the terminal.
 
-11. To localise the robot (acml): `roslaunch navros_pkg amcl.launch map:='name_of_map'`
 
-12. To perform path planning : `roslaunch navros_pkg move_base.launch `
+### Autonomous Navigation
+Run amcl.launch :
+```
 
-13. To view position and orientation of robot in RVIZ : 
+roslaunch navros_pkg amcl.launch map:='name_of_map'
+```
+
+Run move_base.launch :
+```
+
+roslaunch navros_pkg move_base.launch 
+```
+
+Run RVIZ :
 ```
 cd catkin_ws/src/navros_pkg/rviz 
 rviz -d navigate
 ```
-   * Set initial pose (2D pose estimate).
-   * Move the car via teleop keyboard to get more precise localization of the robot.
-   * Set goal for the robot in RVIZ (2D Nav goal)
-   * Green line indicates the path planned.
+
+* Set initial pose (Click "2D pose estimate" and pinpoint the approximate location of robot on map).
+* Set goal for the robot in RVIZ (Click "2D Nav goal" and pinpoint the desired goal on the map).
+* Green line indicates the path planned.
 

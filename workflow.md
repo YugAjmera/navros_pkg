@@ -1,4 +1,6 @@
-# Documentation
+# Work-Flow
+
+### Initial configuration
 
 1. Created a urdf file for a car having chassis, castor wheel,right and left wheel.
 
@@ -12,6 +14,7 @@
 
 6. Added PublishWheelTF in the plugin to get tfs of all the links fixed and non-fixed ![](screenshot/Screenshot%20from%202019-02-10%2011-58-40.png)
 
+
 ### Mapping
 
 7. **/kinect/depth/points** topic gives a 3D point cloud. It needs to be converted into 2D laser scan in order to use slam_gmapping node. For that we need to use pointcloud_to_laserscan node. Install it : `sudo apt install ros-kinetic-pointcloud-to-laserscan ros-kinetic-rosbridge-server`. 
@@ -24,12 +27,14 @@
 
 11. Scaned the cafe environment and saved the map in "maps" folder with name "map1". ![](screenshot/Screenshot%20from%202019-02-11%2012-28-27.png)
 
+
 ### Localization
 
 12. Created a launch file "amcl.launch" to launch the amcl node. It provides **/particlecloud** topic to view the probable position and orientation of the robot on PoseArray in RVIZ.  ![](screenshot/Screenshot%20from%202019-02-11%2012-56-32.png)
 
 **Note** : Before launching amcl node slam_gmapping node has to be killed. Fixed Frame while mapping has to be odom. While estimating robot position, Fixed Frame has to be map.
 
+
 ### Path Planning
 
-13. Created a launch file "move_base.launch" to launch the move_base node and perform path planning. All parameters are listed in the param folder. Add Path to RVIZ to view the planned path once the goal is given.
+13. Created a launch file "move_base.launch" to launch the move_base node and perform path planning. All parameters are listed in the param folder. 

@@ -8,4 +8,7 @@
 		<arg name="gui" value="true"/>
 	</include>
 
+	<!-- Launch the car -->
+	<include file="$(find navros_pkg)/launch/urdf_gazebo_view.launch" />
+
 </launch>
