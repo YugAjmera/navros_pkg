@@ -10,7 +10,7 @@
 - `source ./devel/setup.bash`
 
 
-View [full documentation here ](https://github.com/YugAjmera/navros_pkg/blob/master/Documentation.md) 
+View [documentation here](https://github.com/YugAjmera/navros_pkg/blob/master/Documentation.md) 
 
 * Change the [urdf file](https://github.com/YugAjmera/navros_pkg/blob/master/urdf/car.urdf.xacro) as per the dimensions of your robot.
 
@@ -43,7 +43,7 @@ cd catkin_ws/src/navros_pkg/rviz
 rviz -d laser.rviz
 ```
 
-7. To read the map : `roslaunch navros_pkg gmapping.launch`
+7. To read the map (slam_gmapping): `roslaunch navros_pkg gmapping.launch`
    
 8. To view the map being built in RVIZ ( Move the car around an environment to scan it) :
 ```
@@ -59,7 +59,7 @@ rviz -d map.rviz
 
 10. Shutdown the slam_gmapping node. (Number 7)(Press ctrl+c)
 
-11. To localise of robot : `roslaunch navros_pkg amcl.launch map:='name_of_map'`
+11. To localise the robot (acml): `roslaunch navros_pkg amcl.launch map:='name_of_map'`
 
 12. To view position and orientation of robot in RVIZ : 
 ```
