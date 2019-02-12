@@ -33,24 +33,35 @@ rviz -d kinect.rviz
 
 5. To get laser scan readings : `roslaunch navros_pkg pctl.launch`.
 
-6. To view laser scan readings in RVIZ :`cd catkin_ws/src/navros_pkg/rviz `
-`rviz -d laser.rviz`
+6. To view laser scan readings in RVIZ :
+```
+cd catkin_ws/src/navros_pkg/rviz 
+rviz -d laser.rviz
+```
 
 7. To read the map : `roslaunch navros_pkg gmapping.launch`.
    
-8. To view the map being built in RVIZ ( Move the car around an environment to scan it) :`cd catkin_ws/src/navros_pkg/rviz `
-`rviz -d map.rviz`
+8. To view the map being built in RVIZ ( Move the car around an environment to scan it) :
+```
+cd catkin_ws/src/navros_pkg/rviz 
+rviz -d map.rviz
+```
 
 9. To save the map built :
- ` cd catkin_ws/src/navros_pkg/maps`
- `rosrun map_server map_saver -f name_of_map`
+ ```
+ cd catkin_ws/src/navros_pkg/maps
+ rosrun map_server map_saver -f name_of_map
+ ```
 
 10. Shutdown the slam_gmapping node. (Number 7)(Press ctrl+c)
 
 11. To localise of robot : `roslaunch navros_pkg amcl.launch map:='name_of_map'`.
 
-12. To view position and orientation of robot in RVIZ : `cd catkin_ws/src/navros_pkg/rviz `
-`rviz -d navigate.rviz`
+12. To view position and orientation of robot in RVIZ : 
+```
+cd catkin_ws/src/navros_pkg/rviz 
+rviz -d navigate.
+```
    * Set initial pose (2D point estimate).
    * Move the car via teleop keyboard to get more precise localization of the robot.
 
