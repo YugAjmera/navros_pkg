@@ -14,6 +14,7 @@ View [full documentation here ](https://github.com/YugAjmera/navros_pkg/blob/mas
 
 
 Execute everything in different tabs :
+* Change the [urdf file](https://github.com/YugAjmera/navros_pkg/blob/master/urdf/car.urdf.xacro) as per the dimensions of your robot.
 
 1. To view the model in Gazebo: `roslaunch navros_pkg urdf_gazebo_view.launch `. Before this launch any of this or your custom environment:
    
