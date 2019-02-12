@@ -23,13 +23,11 @@ On a new terminal :
 
 To launch the urdf model in Gazebo in a custom cafe environment :
 ```
-
 roslaunch navros_pkg cafe_custom.launch
 ```
 
 To launch the model in empty world in Gazebo :
 ```
-
 roslaunch gazebo_ros empty_world.launch
 roslaunch navros_pkg urdf_gazebo_view.launch
 ```
