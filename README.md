@@ -1,5 +1,7 @@
 # NavRos
 
+### Autonomous Navigation for a Differential Drive Robot
+
 - `cd catkin_ws/src`
 - `catkin_create_pkg navros_pkg rospy rviz controller_manager gazebo_ros joint_state_publisher robot_state_publisher urdf`
 -  Clone this repo here and replace the files in **navros_pkg**
