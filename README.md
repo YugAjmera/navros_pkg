@@ -1,6 +1,6 @@
 # NavRos
 
-## Autonomous Navigation for a Differential Drive Robot using Kinect Sensor
+## Autonomous Navigation for a Differential Drive Robot
 
 
 ### Getting Started
