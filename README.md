@@ -66,9 +66,12 @@ rviz -d map.rviz
 cd catkin_ws/src/navros_pkg/rviz 
 rviz -d navigate
 ```
-   * Set initial pose (2D point estimate).
+   * Set initial pose (2D pose estimate).
    * Move the car via teleop keyboard to get more precise localization of the robot.
 
 
+13. To perform path planning : `roslaunch navros_pkg move_base.launch `
 
+   * Set goal for the robot in RVIZ (2D Nav goal)
+   * Green line indicates the path planned.
 

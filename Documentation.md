@@ -32,4 +32,4 @@
 
 ### Path Planning
 
-
+13. Created a launch file "move_base.launch" to launch the move_base node and perform path planning. All parameters are listed in the param folder. Add Path to RVIZ to view the planned path once the goal is give.

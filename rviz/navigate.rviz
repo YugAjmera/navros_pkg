@@ -5,7 +5,6 @@ Panels:
     Property Tree Widget:
       Expanded:
         - /Global Options1
-        - /Status1
       Splitter Ratio: 0.5
     Tree Height: 750
   - Class: rviz/Selection
@@ -26,7 +25,7 @@ Panels:
     Experimental: false
     Name: Time
     SyncMode: 0
-    SyncSource: LaserScan
+    SyncSource: ""
 Visualization Manager:
   Class: ""
   Displays:
@@ -101,8 +100,6 @@ Visualization Manager:
           Value: true
         left_wheel:
           Value: true
-        map:
-          Value: true
         odom:
           Value: true
         right_wheel:
@@ -113,17 +110,7 @@ Visualization Manager:
       Show Axes: true
       Show Names: true
       Tree:
-        map:
-          odom:
-            chassis:
-              kinect:
-                {}
-              kinect_link:
-                {}
-              left_wheel:
-                {}
-              right_wheel:
-                {}
+        {}
       Update Interval: 0
       Value: true
     - Alpha: 1
@@ -180,6 +167,29 @@ Visualization Manager:
       Shaft Radius: 0.00999999978
       Shape: Arrow (Flat)
       Topic: /particlecloud
+      Unreliable: false
+      Value: true
+    - Alpha: 1
+      Buffer Length: 1
+      Class: rviz/Path
+      Color: 25; 255; 0
+      Enabled: true
+      Head Diameter: 0.300000012
+      Head Length: 0.200000003
+      Length: 0.300000012
+      Line Style: Lines
+      Line Width: 0.0299999993
+      Name: Path
+      Offset:
+        X: 0
+        Y: 0
+        Z: 0
+      Pose Color: 255; 85; 255
+      Pose Style: None
+      Radius: 0.0299999993
+      Shaft Diameter: 0.100000001
+      Shaft Length: 0.100000001
+      Topic: ""
       Unreliable: false
       Value: true
   Enabled: true
