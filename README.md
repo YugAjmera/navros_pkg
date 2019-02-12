@@ -25,7 +25,6 @@ To launch the urdf model in Gazebo in a custom cafe environment :
 ```
 roslaunch navros_pkg cafe_custom.launch
 ```
-
 To launch the model in empty world in Gazebo :
 ```
 roslaunch gazebo_ros empty_world.launch
@@ -81,13 +80,11 @@ Run amcl.launch :
 
 Replace `name_of_map` with the map name you saved in the previous step.
 ```
-
 roslaunch navros_pkg amcl.launch map:='name_of_map'
 ```
 
 Run move_base.launch :
 ```
-
 roslaunch navros_pkg move_base.launch 
 ```
 
