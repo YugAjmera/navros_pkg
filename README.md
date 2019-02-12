@@ -79,7 +79,7 @@ Now,close this terminal.
 ### Autonomous Navigation
 Run amcl.launch :
 
-Replace the `name_of_map` with the name of the map you saved in the previous step.
+Replace `name_of_map` with the map name you saved in the previous step.
 ```
 
 roslaunch navros_pkg amcl.launch map:='name_of_map'
