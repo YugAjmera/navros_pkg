@@ -13,7 +13,7 @@ View [full documentation here ](https://github.com/YugAjmera/navros_pkg/blob/mas
 
 Execute everything in different tabs :
 
-1. To view the model in Gazebo: `roslaunch navros_pkg urdf_gazebo_view.launch `. Before this launch any of this :
+1. To view the model in Gazebo: `roslaunch navros_pkg urdf_gazebo_view.launch `. Before this launch any of this or your custom environment:
    
    - To launch a custom cafe environment : 
     `roslaunch navros_pkg cafe_custom.launch`
@@ -25,7 +25,8 @@ Execute everything in different tabs :
 
 3. To view the model in RVIZ (using joint_state_publisher gui): `roslaunch navros_pkg urdf_rviz_view.launch`.
    
-4. To view kinect sensor readings in RVIZ : `cd catkin_ws/src/navros_pkg/rviz `
+4. To view kinect sensor readings in RVIZ : 
+`cd catkin_ws/src/navros_pkg/rviz `
 `rviz -d kinect.rviz`
 
 5. To get laser scan readings : `roslaunch navros_pkg pctl.launch`.
