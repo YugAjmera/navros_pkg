@@ -73,7 +73,7 @@ Save the map:
  rosrun map_server map_saver ~/catkin_ws/src/navros_pkg/maps/name_of_map
  ```
 
-Now,close this the terminal.
+Now,close this terminal.
 
 
 ### Autonomous Navigation
