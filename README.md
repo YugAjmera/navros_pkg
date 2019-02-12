@@ -26,8 +26,10 @@ Execute everything in different tabs :
 3. To view the model in RVIZ (using joint_state_publisher gui): `roslaunch navros_pkg urdf_rviz_view.launch`.
    
 4. To view kinect sensor readings in RVIZ : 
-`cd catkin_ws/src/navros_pkg/rviz `
-`rviz -d kinect.rviz`
+```
+cd catkin_ws/src/navros_pkg/rviz 
+rviz -d kinect.rviz
+```
 
 5. To get laser scan readings : `roslaunch navros_pkg pctl.launch`.
 
