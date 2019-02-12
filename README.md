@@ -97,3 +97,5 @@ rviz -d navigate.rviz
 * Set initial pose (Click "2D pose estimate" and pinpoint the approximate location of robot on map).
 * Set goal for the robot in RVIZ (Click "2D Nav goal" and pinpoint the desired goal on the map).
 * Green line indicates the path planned.
+
+View [work-flow here](https://github.com/YugAjmera/navros_pkg/blob/master/workflow.md) 

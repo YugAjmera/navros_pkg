@@ -34,7 +34,9 @@
 
 **Note** : Before launching amcl node slam_gmapping node has to be killed. Fixed Frame while mapping has to be odom. While estimating robot position, Fixed Frame has to be map.
 
+13. RVIZ config files added in "rviz" folder.
+
 
 ### Path Planning
 
-13. Created a launch file "move_base.launch" to launch the move_base node and perform path planning. All parameters are listed in the param folder. 
+14. Created a launch file "move_base.launch" to launch the move_base node and perform path planning. All parameters are listed in the param folder. Set **2D Nav Goal** on RVIZ and the robot will start moving to the goal.  

@@ -1,7 +1,5 @@
 # README2
 
-View [work-flow here](https://github.com/YugAjmera/navros_pkg/blob/master/workflow.md) 
-
 
 ### Execute everything in different tabs :
 
