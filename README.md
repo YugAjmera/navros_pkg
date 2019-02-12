@@ -35,7 +35,7 @@ Keep this terminal running for all the next steps.
 
 
 ### Laser sensor
-On a new terminal
+On a new terminal :
 
 Run RVIZ :
 ```
@@ -45,12 +45,12 @@ rviz -d laser.rviz
 Check if the laser readings are seen in RVIZ.
 After the laser readings are visible,close this terminal.
 
+
 ### Mapping
 On a new terminal :
 
 Run SLAM :
 ```
-
 roslaunch navros_pkg gmapping.launch
 ```
 
@@ -62,7 +62,6 @@ rviz -d map.rviz
 
 Run teleop_twist_keyboard :
 ```
-
 rosrun teleop_twist_keyboard teleop_twist_keyboard.py 
 ```
 
@@ -99,4 +98,3 @@ rviz -d navigate
 * Set initial pose (Click "2D pose estimate" and pinpoint the approximate location of robot on map).
 * Set goal for the robot in RVIZ (Click "2D Nav goal" and pinpoint the desired goal on the map).
 * Green line indicates the path planned.
-
