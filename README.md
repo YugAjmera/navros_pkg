@@ -78,6 +78,8 @@ Now,close this terminal.
 
 ### Autonomous Navigation
 Run amcl.launch :
+
+Replace the `name_of_map` with the name of the map you saved in the previous step.
 ```
 
 roslaunch navros_pkg amcl.launch map:='name_of_map'
@@ -92,7 +94,7 @@ roslaunch navros_pkg move_base.launch
 Run RVIZ :
 ```
 cd catkin_ws/src/navros_pkg/rviz 
-rviz -d navigate
+rviz -d navigate.rviz
 ```
 
 * Set initial pose (Click "2D pose estimate" and pinpoint the approximate location of robot on map).
