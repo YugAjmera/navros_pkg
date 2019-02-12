@@ -13,6 +13,7 @@
 6. Added PublishWheelTF in the plugin to get tfs of all the links fixed and non-fixed ![](screenshot/Screenshot%20from%202019-02-10%2011-58-40.png)
 
 ### Mapping
+
 7. **/kinect/depth/points** topic gives a 3D point cloud. It needs to be converted into 2D laser scan in order to use slam_gmapping node. For that we need to use pointcloud_to_laserscan node. Install it : `sudo apt install ros-kinetic-pointcloud-to-laserscan ros-kinetic-rosbridge-server`. 
 
 8. Created a launch file "pctl.launch" to launch the node. It provides the topic **/kinect/scan**. ![](screenshot/Screenshot%20from%202019-02-10%2013-49-50.png)
@@ -24,6 +25,11 @@
 11. Scaned the cafe environment and saved the map in "maps" folder with name "map1". ![](screenshot/Screenshot%20from%202019-02-11%2012-28-27.png)
 
 ### Localization
+
 12. Created a launch file "amcl.launch" to launch the amcl node. It provides **/particlecloud** topic to view the probable position and orientation of the robot on PoseArray in RVIZ.  ![](screenshot/Screenshot%20from%202019-02-11%2012-56-32.png)
 
-**__Note__** : Before launching amcl node slam_gmapping node has to be killed. Fixed Frame while mapping has to be odom. While estimating robot position, Fixed Frame has to be map.
+**Note** : Before launching amcl node slam_gmapping node has to be killed. Fixed Frame while mapping has to be odom. While estimating robot position, Fixed Frame has to be map.
+
+### Path Planning
+
+
