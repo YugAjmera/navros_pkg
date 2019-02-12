@@ -25,7 +25,7 @@ Panels:
     Experimental: false
     Name: Time
     SyncMode: 0
-    SyncSource: ""
+    SyncSource: LaserScan
 Visualization Manager:
   Class: ""
   Displays:
@@ -100,6 +100,8 @@ Visualization Manager:
           Value: true
         left_wheel:
           Value: true
+        map:
+          Value: true
         odom:
           Value: true
         right_wheel:
@@ -110,7 +112,17 @@ Visualization Manager:
       Show Axes: true
       Show Names: true
       Tree:
-        {}
+        map:
+          odom:
+            chassis:
+              kinect:
+                {}
+              kinect_link:
+                {}
+              left_wheel:
+                {}
+              right_wheel:
+                {}
       Update Interval: 0
       Value: true
     - Alpha: 1
@@ -189,8 +201,18 @@ Visualization Manager:
       Radius: 0.0299999993
       Shaft Diameter: 0.100000001
       Shaft Length: 0.100000001
-      Topic: ""
+      Topic: /move_base/NavfnROS/plan
       Unreliable: false
+      Value: true
+    - Alpha: 0.699999988
+      Class: rviz/Map
+      Color Scheme: costmap
+      Draw Behind: false
+      Enabled: true
+      Name: Map
+      Topic: /move_base/global_costmap/costmap
+      Unreliable: false
+      Use Timestamp: false
       Value: true
   Enabled: true
   Global Options:
@@ -232,10 +254,10 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Pitch: 0.975397944
+      Pitch: 1.39979637
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 3.33540511
+      Yaw: 3.25540352
     Saved: ~
 Window Geometry:
   Displays:

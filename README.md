@@ -61,17 +61,15 @@ rviz -d map.rviz
 
 11. To localise the robot (acml): `roslaunch navros_pkg amcl.launch map:='name_of_map'`
 
-12. To view position and orientation of robot in RVIZ : 
+12. To perform path planning : `roslaunch navros_pkg move_base.launch `
+
+13. To view position and orientation of robot in RVIZ : 
 ```
 cd catkin_ws/src/navros_pkg/rviz 
 rviz -d navigate
 ```
    * Set initial pose (2D pose estimate).
    * Move the car via teleop keyboard to get more precise localization of the robot.
-
-
-13. To perform path planning : `roslaunch navros_pkg move_base.launch `
-
    * Set goal for the robot in RVIZ (2D Nav goal)
    * Green line indicates the path planned.
 
