@@ -85,6 +85,16 @@ Now,close this terminal.
 
 
 ### Autonomous Navigation
+Define the size of your robot :
+```
+roscd navros_pkg/param/
+gedit costmap_common_params.yaml 
+```
+`footprint: [[-x, -y], [-x, y], [x, y], [x, -y]]`
+where x= robot_length/2 
+and y= robot_width/2
+
+
 Run amcl.launch :
 
 Replace `name_of_map` with the map name you saved in the previous step.
