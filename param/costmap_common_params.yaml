@@ -2,9 +2,7 @@ max_obstacle_height: 0.60  # assume something like an arm is mounted on top of t
 
 # Obstacle Cost Shaping (http://wiki.ros.org/costmap_2d/hydro/inflation)
 # robot_radius: 0.20  # distance a circular robot should be clear of the obstacle (kobuki: 0.18)
-x=0.5/2
-y=0.3/2
-footprint: [[-x, -y], [-x, y], [x, y], [x, -y]]
+footprint: [[-0.3, -0.2], [-0.3, 0.2], [0.3, 0.2], [0.3, -0.2]]
 
 map_type: voxel
 
