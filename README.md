@@ -42,7 +42,7 @@ roslaunch navros_pkg urdf_gazebo_view.launch
 Keep this terminal running for all the next steps.
 
 
-### Laser sensor
+### Laser sensor (Lidar or Kinect)
 On a new terminal :
 
 Run RVIZ :
