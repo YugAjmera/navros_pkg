@@ -12,6 +12,10 @@
 - `catkin_make`
 - `source ./devel/setup.bash`
 
+If catkin_make fails :
+```
+sudo apt-get install ros-kinetic-controller-manager
+```
 
 ### Gazebo Simulation
 
