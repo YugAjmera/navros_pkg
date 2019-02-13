@@ -12,7 +12,7 @@
 - `catkin_make`
 - `source ./devel/setup.bash`
 
-If catkin_make fails :
+If catkin_make fails (probably `controller_manager` package does not exist)
 ```
 sudo apt-get install ros-kinetic-controller-manager
 ```
@@ -22,6 +22,11 @@ sudo apt-get install ros-kinetic-controller-manager
 (Skip this while working with real robot)
 
 Change the [urdf file](https://github.com/YugAjmera/navros_pkg/blob/master/urdf/car.urdf.xacro) as per the dimensions of your robot.
+
+Install pointcloud_to_laserscan :
+```
+sudo apt install ros-kinetic-pointcloud-to-laserscan ros-kinetic-rosbridge-server
+```
 
 On a new terminal :
 
