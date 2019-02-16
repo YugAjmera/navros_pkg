@@ -113,7 +113,8 @@ cd catkin_ws/src/navros_pkg/rviz
 rviz -d navigate.rviz
 ```
 
-* Set initial pose (Click "2D pose estimate" and pinpoint the approximate location of robot on map).
+* Set initial pose (Click "2D pose estimate" and pinpoint the approximate location of robot on map). 
+* Red arrows indicate the probable location.
 * Set goal for the robot in RVIZ (Click "2D Nav goal" and pinpoint the desired goal on the map).
 * Green line indicates the path planned.
 
