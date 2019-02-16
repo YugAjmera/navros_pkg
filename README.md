@@ -82,7 +82,7 @@ Save the map:
  ```
 
 Now,close this terminal.
-
+![](screenshot/Screenshot%20from%202019-02-11%2012-28-27.png)
 
 ### Autonomous Navigation
 Define the size of your robot :
