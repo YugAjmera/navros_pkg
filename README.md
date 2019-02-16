@@ -82,6 +82,7 @@ Save the map:
  ```
 
 Now,close this terminal.
+
 ![](screenshot/Screenshot%20from%202019-02-11%2012-28-27.png)
 
 ### Autonomous Navigation
@@ -118,4 +119,5 @@ rviz -d navigate.rviz
 * Set goal for the robot in RVIZ (Click "2D Nav goal" and pinpoint the desired goal on the map).
 * Green line indicates the path planned.
 
+![](screenshot/Screenshot%20from%202019-02-16%2011-06-23.png)
 View [work-flow here](https://github.com/YugAjmera/navros_pkg/blob/master/workflow.md) 
