@@ -121,3 +121,4 @@ rviz -d navigate.rviz
 
 ![](screenshot/Screenshot%20from%202019-02-16%2011-06-23.png)
 View [work-flow here](https://github.com/YugAjmera/navros_pkg/blob/master/workflow.md) 
+More information on the project : [Blog link](https://yainnoware.blogspot.com/2019/02/navrospkg-ros-package.html)
