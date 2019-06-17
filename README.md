@@ -1,8 +1,9 @@
 # NavRos
 
-## Autonomous Navigation for a Differential Drive Robot
+## Autonomous Navigation for Differential Drive Robots
+### (Includes Gazebo simulation)
 
-More information on the project : [Blog link](https://yainnoware.blogspot.com/2019/02/navrospkg-ros-package.html)
+More information on the project : [Blog post](https://yainnoware.blogspot.com/2019/04/ros-navigation.html)
 
 ### Getting Started
 
