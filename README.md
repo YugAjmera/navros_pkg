@@ -122,5 +122,6 @@ rviz -d navigate.rviz
 * Green line indicates the path planned.
 
 ![](planning.gif)
+
 View [work-flow here](https://github.com/YugAjmera/navros_pkg/blob/master/workflow.md) 
 
