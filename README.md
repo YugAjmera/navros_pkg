@@ -70,6 +70,17 @@ cd catkin_ws/src/navros_pkg/rviz
 rviz -d map.rviz
 ```
 
+- For Octomap:
+```
+roslaunch navros_pkg octomap.launch
+```
+
+Run RVIZ for Octomap:
+```
+cd catkin_ws/src/navros_pkg/rviz 
+rviz -d octomap.rviz
+```
+
 Run teleop_twist_keyboard :
 ```
 rosrun teleop_twist_keyboard teleop_twist_keyboard.py 
